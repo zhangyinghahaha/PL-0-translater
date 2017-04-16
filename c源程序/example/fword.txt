@@ -1,0 +1,55 @@
+	SYM	ID	NUM
+const          SYM_const           259               
+a              SYM_ident           273               
+=              OPR_constinit       277               
+10             SYM_number          300               	10
+;              BDY_semicolon       293               
+var            SYM_var             275               
+b              SYM_ident           273               
+,              BDY_comma           291               
+c              SYM_ident           273               
+;              BDY_semicolon       293               
+procedure      SYM_procedure       260               
+p              SYM_ident           273               
+;              BDY_semicolon       293               
+begin          SYM_begin           261               
+c              SYM_ident           273               
+:=             OPR_become          278               
+b              SYM_ident           273               
++              OPR_plus            279               
+a              SYM_ident           273               
+;              BDY_semicolon       293               
+end            SYM_end             262               
+;              BDY_semicolon       293               
+begin          SYM_begin           261               
+read           SYM_read            264               
+(              BDY_lparen          289               
+b              SYM_ident           273               
+)              BDY_rparen          290               
+;              BDY_semicolon       293               
+while          SYM_while           267               
+b              SYM_ident           273               
+#              OPR_neq             287               
+0              SYM_number          300               	0
+do             SYM_do              265               
+begin          SYM_begin           261               
+call           SYM_call            266               
+p              SYM_ident           273               
+;              BDY_semicolon       293               
+write          SYM_write           263               
+(              BDY_lparen          289               
+2              SYM_number          300               	2
+*              OPR_times           281               
+c              SYM_ident           273               
+)              BDY_rparen          290               
+;              BDY_semicolon       293               
+read           SYM_read            264               
+(              BDY_lparen          289               
+b              SYM_ident           273               
+)              BDY_rparen          290               
+;              BDY_semicolon       293               
+end            SYM_end             262               
+;              BDY_semicolon       293               
+end            SYM_end             262               
+.              BDY_period          292               
+单词数：53	行数：15	字符数：119

@@ -1,0 +1,57 @@
+[ 1] constdefine->SYM_ident OPR_constinit SYM_number
+[ 2] noconstexplain->SYM_const constdefine
+[ 3] constexplain->noconstexplain BDY_semicolon
+[ 4] varexplain->SYM_var SYM_ident
+[ 5] novarexplain->novarexplain BDY_comma SYM_ident
+[ 6] varexplain->novarexplain BDY_semicolon
+[ 7] prohead->SYM_procedure SYM_ident BDY_semicolon
+[ 8] factor->SYM_ident
+[ 9] term->factor
+[10] factor->SYM_ident
+[11] term->factor
+[12] midxiang->OPR_plus term 
+[13] expression->term midxiang
+[14] assignsen->SYM_ident OPR_become expression 
+[15] sentence->assignsen 
+[16] sentencelist->sentence BDY_semicolon
+[17] complexsen->SYM_begin sentencelist SYM_end
+[18] sentence->complexsen 
+[19] sonprogram->sentence
+[20] proexplain->prohead sonprogram BDY_semicolon
+[21] identlist->SYM_ident
+[22] readsen->SYM_read BDY_lparen identlist BDY_rparen 
+[23] sentence->readsen 
+[24] sentencelist->sentence BDY_semicolon
+[25] factor->SYM_ident
+[26] term->factor
+[27] expression->term
+[28] relationop->OPR_neq
+[29] factor->SYM_number
+[30] term->factor
+[31] expression->term
+[32] condition->expression relationop expression
+[33] callsen->SYM_call SYM_ident 
+[34] sentence->callsen 
+[35] sentencelist->sentence BDY_semicolon
+[36] factor->SYM_number
+[37] factor->SYM_ident
+[38] midfactor->OPR_times factor
+[39] term->factor midfactor
+[40] expression->term
+[41] expressionlist->expression
+[42] writesen->SYM_write BDY_lparen expressionlist BDY_rparen 
+[43] sentence->writesen 
+[44] sentencelist->sentencelist sentence BDY_semicolon
+[45] identlist->SYM_ident
+[46] readsen->SYM_read BDY_lparen identlist BDY_rparen 
+[47] sentence->readsen 
+[48] sentencelist->sentencelist sentence BDY_semicolon
+[49] complexsen->SYM_begin sentencelist SYM_end
+[50] sentence->complexsen 
+[51] whilesen->SYM_while condition SYM_do sentence
+[52] sentence->whilesen 
+[53] sentencelist->sentencelist sentence BDY_semicolon
+[54] complexsen->SYM_begin sentencelist SYM_end
+[55] sentence->complexsen 
+[56] sonprogram->constexplain varexplain proexplain sentence
+[57] program->sonprogram BDY_period

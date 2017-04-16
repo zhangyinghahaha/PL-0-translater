@@ -1,0 +1,9 @@
+const a=10;
+var b,c;
+procedure p;
+begin
+	c:=b+a;
+end;
+begin
+	if b#0 then c:=b+a;
+end.

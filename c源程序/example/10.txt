@@ -1,0 +1,7 @@
+const a=10;
+var b,c;
+procedure p;
+begin
+	c:=b+a;
+end;
+if c>5 then c:=c+a.
